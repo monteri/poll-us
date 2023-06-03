@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+main {
+  background-color: #ccccee;
+}
+
+.pollus__container {
+  min-height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.pollus__link {
+  cursor: pointer;
+}
+
+.pollus__dashboard-card > div {
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
+.pollus__dashboard-card__text-block {
+  padding: 0.5rem 0.75rem;
+  background: rgba(34, 0, 85, 0.6);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pollus__dashboard-card__polls {
+  background: url("assets/polls.webp");
+}
+
+.pollus__dashboard-card__create {
+  background: url("assets/create-poll.webp");
+}
+
+.pollus__dashboard-card__history {
+  background: url("assets/archive.webp");
+}
+
+.pollus__answers-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pollus__polls-container {
+  min-height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.pollus__polls__list-item {
+  margin-top: 1rem;
+  cursor: pointer;
+}
