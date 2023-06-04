@@ -10,9 +10,23 @@ export default defineConfig({
     eslint({ failOnError: false }),
     VitePWA({
       registerType: 'autoUpdate',
-      devOptions: {
-        enabled: false,
-      },
+      includeAssets: ['poll.png', 'poll-apple.webp'],
+      name: 'Poll Us',
+      short_name: 'Pollus',
+      description: 'Polling platform',
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: 'poll-apple.webp',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'poll.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
     }),
   ],
 });
