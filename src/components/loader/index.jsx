@@ -1,14 +1,14 @@
-import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function Loader() {
   return (
-    <Backdrop
-      sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      open
+    <div style={{
+      display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh',
+    }}
     >
-      <CircularProgress color="inherit" />
-    </Backdrop>
+      <CircularProgress size={20} sx={{ mr: '4px' }} />
+      Waiting for server response...
+    </div>
   );
 }
 

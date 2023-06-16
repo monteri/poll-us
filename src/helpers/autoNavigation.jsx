@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 import { useAuthStore, useGlobalStore } from '../store';
 import Loader from '../components/loader';
 

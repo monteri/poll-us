@@ -7,8 +7,29 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   plugins: [
     react(),
-    eslint({ failOnError: false }),
+    eslint({ failOnError: false, include: './src' }),
     VitePWA({
+      registerType: 'autoUpdate',
+      strategies: 'networkFirst',
+      devOptions: {
+        enabled: true,
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        navigateFallback: '/index.html',
+        runtimeCaching: [
+          {
+            urlPattern: /^(http|https):\/\/[a-z0-9:-_]+\/api\/.*/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api-cache',
+              expiration: {
+                maxAgeSeconds: 60,
+              },
+            },
+          },
+        ],
+      },
       manifest: {
         name: 'Poll Us',
         short_name: 'Pollus',
