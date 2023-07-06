@@ -19,7 +19,7 @@ export default defineConfig({
         navigateFallback: '/index.html',
         runtimeCaching: [
           {
-            urlPattern: /^(http|https):\/\/[a-z0-9:-_]+\/api\/.*/,
+            urlPattern: /^(http|https):\/\/[a-z0-9:-_.]+\/api\/.*/,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
